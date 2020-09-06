@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <script type="text/javascript">
+    var firstNumber;
+    var secondNumber;
+
+    while(true) {
+      firstNumber = parseInt(prompt("Enter first integer number"));
+      secondNumber = parseInt(prompt("Enter second integer number"));
+      if ( ! isNaN(firstNumber) && ! isNaN(secondNumber)) {
+        break;
+      } else {
+        alert("some number is not a number");
+      }
+    }
+      
+
+    if (firstNumber > secondNumber) {
+        alert("First number greater than second");
+      } else if (firstNumber < secondNumber) {
+        alert("Second number greater that first");
+      } else {
+        alert("Numbers are equal");
+      }
+
+
+
+</script>
+</body>
+</html>

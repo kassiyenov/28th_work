@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head> 
+<body>
+  <script type="text/javascript">
+    var questionCounter = 0;
+    var rightAnswerCounter = 0;
+    var wrongAnswerCounter = 0;
+
+    while(true) {
+      var first = Math.floor(Math.random() * 9 + 1);
+      var second = Math.floor(Math.random() * 9 + 1);
+      var answerStr = prompt('Каков будет результат ' + first + ' * ' + second + ' = ?');
+      if (answerStr === null) {
+        break;
+      }
+      questionCounter++;      
+      var answer = parseInt(answerStr);
+      if (answer === first * second) {
+        alert('Ответ верный!');
+        rightAnswerCounter++;
+      } else {
+        alert('Ответ не верный!');
+        wrongAnswerCounter++;
+      }
+    }
+    alert("Кол-во заданных вопросов: " + questionCounter + "\n" + 
+          "Кол-во правильных ответов: " + rightAnswerCounter + "\n" +
+          "Кол-во ошибочных ответов: " + wrongAnswerCounter + "\n"
+    )
+  </script>
+</body>
+</html>

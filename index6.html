@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <script type="text/javascript">
+    var Ox = parseInt(prompt("What is your x coordinate?"));
+    var Oy = parseInt(prompt("What is your y coordinate?"));
+
+    var border = {
+      x : 12,
+      y : 6
+    }
+
+    if (Ox > border.x && Oy > border.y) {
+      alert("You live in North East")
+    } else if (Ox < border.x && Oy > border.y) {
+      alert("You live in North West");
+    } else if (Ox < border.x && Oy < border.y) {
+      alert("You live in South West");
+    } else if (Ox > border.x && Oy < border.y) {
+      alert("You live in North West");
+    } else if (Ox == border.x && Oy == border.y) {
+      alert("You live at the border");
+    }
+  </script>
+</body>
+</html>
